@@ -22,7 +22,7 @@ import numpy as np
 import scipy.signal
 import soundfloat
 import os
-#import optimrandomdir_pytorch
+import optimrandomdir_pytorch
 #import optimrandomdir_pytorch_parallel as optimrandomdir_pytorch
 #import GLD_fast_pytorch as optimrandomdir_pytorch
 import time
@@ -206,7 +206,7 @@ print("starting loss:", loss_fn(Ypred, target).item())
 print("Starting training the neural network")
 os.system('espeak -s 120 "Starting training the neural network"')
 
-randdir=False #True for optimization of random directions
+randdir=True #True for optimization of random directions
 starttime=time.time()
 #--Start optimization of random directions------------------------
 if randdir == True:
